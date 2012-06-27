@@ -1,4 +1,4 @@
 Guitar = git tar
 
-This is a simple Sinitra app to allow git repos to be downloaded as tarballs.  
+This is a simple Sinatra app to allow git repos to be downloaded as tarballs.  
 http://<hostname>/?repo=<urlencoded git repo>
