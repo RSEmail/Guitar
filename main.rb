@@ -11,10 +11,7 @@ get '/' do
   tarball = ""
 
   Dir.mktmpdir() do |tmpdir|
-    puts "git clone --bare #{git} #{tmpdir}"
-    puts "cd #{tmpdir}"
-    puts "git archive --format=tar --prefix=#{project_name}/ #{ref} | gzip > #{project_name}.tar.gz"
-    output = %x{
+  output = %x{
       git clone --bare #{git} #{tmpdir}
       cd #{tmpdir}
       git archive --format=tar --prefix=#{project_name}/ #{ref} | gzip > #{project_name}.tar.gz
